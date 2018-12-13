@@ -1,0 +1,261 @@
+.navbar {
+  transition: all 1s;
+  -moz-transition: all 1s; /* Firefox 4 */
+  -webkit-transition: all 1s; /* Safari and Chrome */
+  -o-transition: all 1s; 
+}
+.navbar.nav-active,.navbar.nav-active:hover {
+  background-color: #2c3131;
+  position: fixed;
+}
+
+.navbar:hover {
+  background-color:rgba(44, 49, 48, 0.2);
+}
+.footer {
+  background-color: #333;
+  padding: 80px 0;
+  color: #adb5bd;
+  font-size: 14px;
+  margin-top: 3rem;
+}
+
+.footer .title {
+	color: #e9ecef;
+	font-weight: bold;
+}
+.footer a {
+	color: #e9ecef
+}
+
+.container h1 {
+  margin-bottom: 5rem;
+}
+
+.container h2 {
+  margin-bottom: 3rem;
+}
+.container h3 {
+	margin-bottom: 1rem;
+  }
+.container .row {
+  
+  margin: 0 auto 1rem;
+}
+.container ul.item-all li {
+  line-height: 2rem;
+}
+.container .intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.container p {
+  line-height: 1.5rem;
+}
+.container .row h1 {
+  color: #ccc;
+  margin-bottom: 1rem;
+  font-size: 4rem;
+}
+.container.introduction,.container.vision {
+  max-width: 980px;
+}
+
+/* 解决方案 */
+.space-1--lg {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.space-3--lg {
+  padding-top: 8.125rem;
+  /* padding-bottom: 8.125rem; */
+}
+.space-3-top--lg {
+  padding-top: 8.125rem;
+}
+.space-3-bottom--lg {
+  padding-bottom: 8.125rem;
+}
+.space-4--lg {
+  padding-top: 12.5rem;
+  padding-bottom: 12.5rem;
+}
+.space-4-top--lg {
+  padding-top: 12.5rem;
+}
+.space-4-bottom--lg {
+  padding-bottom: 12.5rem;
+}
+.space-5--lg {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+.space-5-top--lg {
+  padding-top: 15rem;
+}
+.space-0--lg {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.space-0-top--lg {
+  padding-top: 0;
+}
+.space-0-bottom--lg {
+  padding-bottom: 0;
+}
+@media (max-width: 576px){
+  .container h1 {
+    font-size: 1.5rem !important;
+  }
+  h2 {
+    font-size: 1.2rem !important;
+  }
+  h4,.h4 {
+    font-size: 1rem !important;
+  }
+  .navbar {
+    position: fixed;
+  }
+}
+
+
+/* 动画 */
+.an_leftin {
+  position: relative;
+  animation: 0.5s ease-in forwards;
+  animation-name: an_leftin;
+  animation-delay: 1s;
+  -webkit-animation-delay: 0.5s;
+}
+@keyframes an_leftin {
+  0% {
+      opacity: 0;
+      left: -40px;
+  }
+  100% {
+      opacity: 1;
+      left: 0px;
+  }
+}
+.an_bottomin {
+  position: relative;
+  animation: 0.5s ease-in forwards;
+  animation-name: an_bottomin;
+  animation-delay: 1s;
+  -webkit-animation-delay: 0.5s;
+}
+@keyframes an_bottomin {
+  0% {
+      opacity: 0;
+      top: 30px;
+  }
+  100% {
+      opacity: 1;
+      top: 0px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .swiper-container {
+      height: 0;
+  }
+} 
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+.swiper-container {
+      height: 190px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px){
+.swiper-container {
+      height: 250px;
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+.swiper-container {
+      height: 290px;
+  }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1365.98px){
+.swiper-container {
+      height: 380px;
+  }
+}
+@media (min-width: 1366px) and (max-width: 1699.98px){
+.swiper-container {
+      height: 440px;
+  }
+}
+@media (min-width: 1700px) {
+.swiper-container {
+      height: 500px;
+  }
+}
+
+/* 右侧客服样式 */
+.kf-box {
+  width:58px;
+  position:fixed;
+  z-index: 999999999;
+  right:30px;
+  bottom:300px;
+  /*border: 1px chartreuse solid;*/
+  /*border-radius:5px;*/
+  /*box-shadow:3px 3px 9px rgba(0,0,0,.25),-3px -3px 9px rgba(0,0,0,.25);*/
+  /*background:#fff*/
+}
+
+.kf-box .zhiding,.kf-box .erweima, .kf-box .kefu{
+  width:58px;
+  height: 58px;
+  margin-bottom: 10px;
+}
+.kf-box .zhiding a{
+  width:58px;
+  height: 58px;
+  display: block;
+  background: url("../img/zhiding-2.png") center center no-repeat;
+}
+.kf-box .zhiding a:hover{
+  background: url("../img/zhiding-2_on.png");
+  border-bottom: none;
+
+}
+.kf-box .erweima {
+  background: url("../img/erweima.png") center center no-repeat;
+  position: relative;
+}
+
+.kf-box .erweima:hover {
+   background: url("../img/erweima_on.png") center center no-repeat;
+}
+.kf-box .erweima .erweima-tu {
+  width: 121px;
+  height: 116px;
+  background: url("../img/微信.png") center center no-repeat;
+  position: absolute;
+  left: -121px;
+  top:20px;
+  display: none;
+}
+.kf-box .erweima:hover .erweima-tu {
+  display: block;
+}
+.kf-box .kefu a{
+  width:58px;
+  height: 58px;
+  display: block;
+  background: url("../img/kefu.png") center center no-repeat;
+}
+.kf-box .kefu a:hover{
+  background: url("../img/kefu_on.png");
+  border-bottom: none;
+
+}

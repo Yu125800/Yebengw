@@ -1,0 +1,92 @@
+<div class="container space-2 space-3--lg introduction">
+    <h2 class="text-center">
+        企业简介
+        </h1>
+        <div class="row">
+            <div class="col-md-4 mb-7 mb-md-0">
+                <!-- Icon Blocks -->
+                <div class="text-center px-lg-3">
+                    <h1 id="scoreDisplay_1">2015</h1>
+                    <h3 class="h4">业本成立</h3>
+
+                </div>
+                <!-- End Icon Blocks -->
+            </div>
+
+            <div class="col-md-4 mb-7 mb-md-0">
+                <!-- Icon Blocks -->
+                <div class="text-center px-lg-3">
+                    <h1 id="scoreDisplay_2">100</h1>
+                    <h3 class="h4">服务城市</h3>
+
+                </div>
+                <!-- End Icon Blocks -->
+            </div>
+
+            <div class="col-md-4">
+                <!-- Icon Blocks -->
+                <div class="text-center px-lg-3">
+                    <h1 id="scoreDisplay_3">5000</h1>
+                    <h3 class="h4">服务商家</h3>
+
+                </div>
+                <!-- End Icon Blocks -->
+            </div>
+        </div>
+        <p class="mb-0" style="text-indent: 2em">上海业本科技有限公司成立于2015年4月，总部位于上海，在全国多地设有分公司。业本科技是中国旅游企业信息化领导者，提供领先的应用系统技术和服务，特别聚焦打破信息壁垒，实现旅游行业供应链智能匹配，让旅游交易变得透明，公正，高效，精准，助力旅游产业转型升级。</p>
+
+</div>
+
+<script>
+    //数字自增到某一值动画参数（目标元素,自定义配置）
+    function NumAutoPlusAnimation(targetEle, options) {
+
+        /*可以自己改造下传入的参数，按照自己的需求和喜好封装该函数*/
+        //不传配置就把它绑定在相应html元素的data-xxxx属性上吧
+        options = options || {};
+
+        var $this = document.getElementById(targetEle),
+            time = options.time || $this.data('time'), //总时间--毫秒为单位
+            finalNum = options.num || $this.data('value'), //要显示的真实数值
+            regulator = options.regulator || 100, //调速器，改变regulator的数值可以调节数字改变的速度
+
+            step = finalNum / (time / regulator),/*每30ms增加的数值--*/
+            count = 0, //计数器
+            initial = 0;
+
+        var timer = setInterval(function() {
+
+            count = count + step;
+
+            if(count >= finalNum) {
+                clearInterval(timer);
+                count = finalNum;
+            }
+            //t未发生改变的话就直接返回
+            //避免调用text函数，提高DOM性能
+            var t = Math.floor(count);
+            if(t == initial) return;
+
+            initial = t;
+
+            $this.innerHTML = initial;
+        }, 30);
+    }
+
+    NumAutoPlusAnimation("scoreDisplay_1", {
+        time: 2000,
+        num: 2015,
+        regulator: 50
+    })
+    NumAutoPlusAnimation("scoreDisplay_2", {
+        time: 2000,
+        num: 100,
+        regulator: 50
+    })
+    NumAutoPlusAnimation("scoreDisplay_3", {
+        time: 2000,
+        num: 5000,
+        regulator: 50
+    })
+</script>
+

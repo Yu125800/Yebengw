@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      @@include('./head.html',{
+        "title":"关于业本-业本科技"
+      })
+  </head>
+
+  <body>
+  @@include('./navbar.html',{
+     "index": "active"
+   })
+   <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/关于业本.jpg" class="img-fluid img-cover" width="100%"></div>
+      </div>
+  </div>
+  @@include('./container-introduction.html',{
+    "index": "active"
+  })
+
+  @@include('./container-mission.html',{
+    "index": "active"
+  })
+  @@include('./container-vision.html',{
+    "index": "active"
+  })
+   @@include('./foot.html',{
+    "index": "active"
+  })
+  @@include('./kf.html',{
+  "index": "active"
+  })
+  </body>
+</html>
